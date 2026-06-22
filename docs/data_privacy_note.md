@@ -1,46 +1,44 @@
-Data Privacy and Public Repository Note
+Data Privacy and Repository Use Note
 
-This repository is a portfolio demonstration of an analysis workflow developed for restricted real-world clinical data.
+This repository contains cleaned analysis notebooks and project outputs from an MDD antidepressant treatment pattern analysis using OMOP-style clinical data.
 
-The public repository does not include:
+The repository is intended for private project documentation and review. Before any broader sharing, publication, or public release, all notebooks, tables, and figures should be reviewed for data-use compliance and disclosure risk.
 
-* Participant-level data
-* Raw clinical records
-* Person identifiers
-* Restricted research environment outputs
-* Unsuppressed small-cell tables
-* Query result files exported from the original research workspace
+Data Protection Considerations
+
+The analysis was conducted using patient-level clinical records in a controlled research environment. Care should be taken to avoid sharing:
+
+* Participant-level records
+* Direct identifiers
+* Raw query outputs containing patient-level rows
 * Workspace paths, dataset identifiers, access tokens, or credentials
+* Unsuppressed small-cell results
+* Outputs that could allow small counts to be inferred from percentages or denominators
 
-All public-facing materials are intended to demonstrate the analytical method rather than disclose original restricted data.
+Notebook Cleaning
 
-Small-Cell Protection
+The analysis notebooks in this repository were cleaned to improve readability and organization. Outputs should be cleared before uploading when the notebook contains patient-level previews, such as head() outputs, raw person identifiers, or row-level clinical records.
 
-Any table or figure prepared for public sharing should be reviewed for small-cell disclosure risk. Small counts should be suppressed, combined, or removed where necessary. Percentages should also be reviewed because small counts can sometimes be inferred from percentages and denominators.
+Small-Cell Review
+
+Any table or figure prepared for external sharing should be reviewed for small-cell disclosure risk. Small counts should be suppressed, combined, or removed where necessary.
+
+Percentages should also be reviewed because small counts can sometimes be inferred from percentages and denominators.
 
 Code Sharing Approach
 
-The code included in this repository is cleaned and generalized for portfolio use. It is intended to show:
+The notebooks document the analysis workflow, including:
 
-* Cohort construction logic
-* Drug class mapping approach
-* CYP3A4 inhibitor grouping
-* Line-of-therapy definitions
+* Cohort construction
+* CYP3A4 inhibitor exposure identification
+* Antidepressant drug class mapping
+* LOT1 and LOT2 treatment definitions
 * Overlap-days calculation
 * Summary table generation
-* Visualization workflow
+* Sankey and overlap distribution visualization
 
-The code should not be interpreted as a complete reproducible analysis of the original restricted dataset because the underlying participant-level data are not publicly available.
+The code is intended to document the project workflow and should be reviewed before any external reuse or dissemination.
 
-Synthetic or Redacted Outputs
+Repository Purpose
 
-Any example outputs in this repository should be one of the following:
-
-* Generated from synthetic/example data
-* Redacted
-* Aggregated with appropriate cell suppression
-* Modified to avoid disclosure of restricted information
-
-Purpose
-
-The purpose of this repository is to demonstrate health data analysis skills, including real-world data cleaning, medication exposure classification, line-of-therapy methodology, and privacy-aware reporting.
+The purpose of this repository is to organize and document the completed analysis workflow, cleaned notebooks, table outputs, and visualization outputs for private review and future reference.
