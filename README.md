@@ -102,10 +102,8 @@ mdd-antidepressant-treatment-patterns/
 │   ├── 03_cyp3a4_drug_summary.ipynb
 │   └── 04_antidepressant_class_distribution_lot_analysis.ipynb
 │
-├── outputs/
+├── outputs_demo/
 │   └── analysis table shell and final reporting outputs
-│
-└── figures/
     └── Sankey diagrams and overlap distribution figures
 
 Privacy and Data Use
